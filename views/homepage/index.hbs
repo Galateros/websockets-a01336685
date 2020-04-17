@@ -1,0 +1,48 @@
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-12">
+      <div  style = "display: none;" id = "game-form">
+          <p id = "letter">Placeholder</p>
+          <p id = "char">Generic Name</p>
+          <div class="form-label-group">
+            <input name="name" type="text" id="name" class="form" placeholder="Nombre">
+            <label for="name">Name</label>
+          </div>
+
+          <div class="form-label-group">
+            <input name="pokemon" type="text" id="pokemon" class="form" placeholder="Pokémon">
+            <label for="pokemon">Pokémon</label>
+          </div>
+          <div class="form-label-group">
+            <input name="monster" type="text" id="monster" class="form" placeholder="Monster">
+            <label for="monster">Monster</label>
+          </div>
+
+          <a class="btn btn-lg btn-primary btn-block" href="javascript:;" onClick="sendAnswers()">Submit</a>
+        </div>
+
+      <div id = "unready">
+        <input type="button" 
+            value="Ready Up" 
+            class="btn btn-success"
+            onClick="playerReady()"></input>
+      </div>
+      <div id = "winner-screen" style = "display: none;">
+        <h3 id = "win-player">placeholder name</h3>
+        <p id = "win-score">placeholder score</p>
+        <p>Listo para el siguiente juego?</p>
+      </div>
+      <div id = "wait-to-start" style="display: none">
+        <p>Esperando a que mas jugadores esten listos y que termine la ronda previa</p>
+      </div>
+      <input type="button" 
+            value="Send toast" 
+            class="btn btn-success"
+            onClick="numberOfPlayers()"></input>
+      <input type="button" 
+            value="Send Message" 
+            class="btn btn-success"
+            onClick="messageToServer('mensaje desde el cliente')"></input>
+    </div>
+  </div>
+</main>
